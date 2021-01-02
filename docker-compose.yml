@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  postgres:
+    extends: 
+      file: ./containers/base.yml
+      service: postgres
+  django:
+    extends: 
+      file: ./containers/base.yml
+      service: django
+
+volumes:
+  django_data: {}
+  django_data_backup: {}
