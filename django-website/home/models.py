@@ -11,33 +11,39 @@ from core.models import BaseModel
 from portfolio.models import Project
 
 class HomePage(BaseModel):
-    payoff = RichTextField(blank=True, help_text=_('Home intro'))
+    main_subtitle = RichTextField(blank=True, help_text=_('Home Subtitle'))
+    main_description = RichTextField(blank=True, help_text=_('Home Subtitle'))
 
-    partner_title = RichTextField(blank=True)
-    partner_subtitle = RichTextField(blank=True)
+    portfolio_title = RichTextField(blank=True)
+    portfolio_subtitle = RichTextField(blank=True)
 
-    works_title = RichTextField(blank=True)
-    works_subtitle = RichTextField(blank=True)
+    about_title = RichTextField(blank=True)
+    about_subtitle = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel('payoff'),
-
         MultiFieldPanel(
             [
-                FieldPanel('section_title'),
-                FieldPanel('section_subtitle'),
+                FieldPanel('main_subtitle'),
+                FieldPanel('main_description'),
             ],
-            heading=_('Services')
+            heading=_('Main Heading')
         ),
 
         MultiFieldPanel(
             [
-                FieldPanel('works_title'),
-                FieldPanel('works_subtitle'),
+                FieldPanel('portfolio_title'),
+                FieldPanel('portfolio_subtitle'),
             ],
-            heading=_('Works')
+            heading=_('Portfolio')
         ),
 
+        MultiFieldPanel(
+            [
+                FieldPanel('about_title'),
+                FieldPanel('about_subtitle'),
+            ],
+            heading=_('About Me')
+        ),
     ]
 
     promote_panels = Page.promote_panels + [
