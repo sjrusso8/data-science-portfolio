@@ -1,0 +1,18 @@
+{
+    "name": "data-science-blog",
+    "version": "1.0.0",
+    "description": "Setting up a Portfolio site so I can show my learning progress.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "postcss tailwindcss/tailwind.css -o django-website/templates/static/css/tailwind.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.1.0",
+        "postcss-cli": "^8.3.1",
+        "tailwindcss": "^2.0.2"
+    }
+}
