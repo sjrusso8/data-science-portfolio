@@ -3,19 +3,6 @@
 <!--Main title section-->
 <div class="pt-24">
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <!--Left Col-->
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <h1 class="my-4 uppercase text-5xl font-bold leading-tight">
-                {{ page.title }}
-            </h1>
-            <div class="leading-normal text-xl md:text-2xl mb-8">
-                {{ page.main_subtitle|richtext }}
-            </div>
-            <div class="tracking-loose w-full">
-                {{ page.main_description|richtext }}
-            </div>
-        </div>
-        <!--Right Col-->
         <div class="absolute w-full md:w-3/5" id="particles-js"></div>
     </div>
 </div>
@@ -55,7 +42,7 @@
                 <div class="bg-white shadow-2xl rounded-lg mb-6 tracking-wide">
                     <div class="md:flex-shrink-0">
                         <div class="w-full h-64 rounded-lg rounded-b-none">
-                        {% image project.image scale-50 %}
+                            {% image project.image scale-50 %}
                         </div>
                     </div>
                     <div class="px-4 py-2 mt-2">
@@ -89,25 +76,6 @@
                 </div>
             </article>
             {% endfor %}
-        </div>
-    </div>
-</section>
-<section class="bg-gray-100 border-b py-8" id="about">
-    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            {{ page.about_title|richtext }}
-        </h1>
-        <div class="w-full mb-4">
-            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <div class="text-gray-800 text-base px-6 m-5">
-                        {{ page.about_subtitle|richtext }}
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </section>
