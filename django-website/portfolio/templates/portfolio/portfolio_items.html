@@ -31,14 +31,14 @@
 <section class="bg-white border-b py-8" id="portfolio">
     <div class="container max-w-7xl mx-auto m-8">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            {{ page.portfolio_title|richtext }}
+            {{ page.section_title|richtext }}
         </h1>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="flex flex-col sm:flex-row">
-            {% for project in projects %}
-            <article class="mx-auto px-4 py-4 max-w-xl md:my-4">
+        <div class="flex flex-col sm:flex-row flex-wrap">
+             {% for project in page.projects.all %}
+            <article class="mx-auto px-4 py-4 max-w-sm md:my-4">
                 <div class="bg-white shadow-2xl rounded-lg mb-6 tracking-wide">
                     <div class="md:flex-shrink-0">
                         <div class="w-full h-64 rounded-lg rounded-b-none">
@@ -46,30 +46,21 @@
                         </div>
                     </div>
                     <div class="px-4 py-2 mt-2">
-                        <h2 class="font-bold text-2xl text-gray-800 tracking-normal">{{ project.name }}</h2>
-                        <p class="text-sm text-gray-700 px-4 mr-1 mb-3">
-                            Date
-                        </p>
+                        <h2 class="font-bold text-2xl mb-2 text-gray-800 tracking-normal">{{ project.name }}</h2>
                         <div class="text-sm text-gray-700 px-2 mr-1">
-                            {{ project.description|richtext }}
+                            {{ project.story|richtext }}
                         </div>
                         <div class="flex items-center justify-around ml-3 my-2 md:my-5">
-                            <div class="transition duration-300 ease-in-out bg-g-metal-700 hover:bg-p-orange-500 rounded-full px-4 mr-2 py-1 text-sm">
+                            <a href="{{ project.link }}" class="transition duration-300 ease-in-out bg-g-metal-700 hover:bg-p-orange-500 rounded-full px-4 mr-2 py-1 text-sm">
                                 Live Demo
-                            </div>
-                            <div class="transition duration-300 ease-in-out bg-g-metal-700 hover:bg-p-orange-500 rounded-full px-4 mr-2 py-1 text-sm">
+                            </a>
+                            <a href="{{ project.git_link }}" class="transition duration-300 ease-in-out bg-g-metal-700 hover:bg-p-orange-500 rounded-full px-4 mr-2 py-1 text-sm">
                                 Github
-                            </div>
-                            <div class="transition duration-300 ease-in-out bg-g-metal-700 hover:bg-p-orange-500 rounded-full px-4 mr-2 py-1 text-sm">
-                                Read More
-                            </div>
+                            </a>
                         </div>
                         <div class="flex items-center justify-end ml-3 my-3">
                             <div class="bg-gray-400 uppercase rounded-full px-4 text-xs mr-2  py-1">
                                 {{ project.category|richtext}}
-                            </div>
-                            <div class="bg-gray-400 uppercase rounded-full px-4 text-xs mr-2  py-1">
-                                Placeholder
                             </div>
                         </div>
                     </div>

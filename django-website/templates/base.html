@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static wagtailcore_tags %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -46,16 +46,16 @@
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center" id="nav-items">
                     <li class="mr-3 text-white">
-                        <a class="inline-block py-2 px-4 font-bold no-underline" href="#">Home</a>
+                        <a class="inline-block py-2 px-4 font-bold no-underline" href="{% slugurl 'steven-j-russo' %}">Home</a>
                     </li>
                     <li class="mr-3 text-white">
-                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="#portfolio">Recent Work</a>
+                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#recent-work">Recent Work</a>
                     </li>
                     <li class="mr-3 text-white">
-                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="#about">About</a>
+                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#about">About</a>
                     </li>
                     <li class="mr-3 text-white">
-                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="#">Portfolio</a>
+                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="{% slugurl 'portfolio' %}">Portfolio</a>
                     </li>
 
                     <li class="mr-3 text-white">
