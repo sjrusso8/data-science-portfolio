@@ -1,4 +1,4 @@
-{% load i18n wagtailcore_tags %}
+{% load i18n wagtailcore_tags wagtailimages_tags %}
 
 <!--Main title section-->
 <div class="pt-24">
@@ -55,19 +55,21 @@
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6">
+            <div class="">
                 {% for project in projects  %}
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
                     {{ project.name }}
                 </h3>
 
-                <p class="text-gray-600 mb-8">
+                <div class="text-gray-600 mb-8">
+                    {{ project.category|richtext}}
                     {{ project.description|richtext }}
+                    {{ project.link }}
                     <br />
                     <br /> Images from:
                     <a class="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
-                </p>
-
+                </div>
+                    {% image project.image scale-50 %}
                 {% endfor %}
             </div>
         </div>
