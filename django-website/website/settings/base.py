@@ -59,7 +59,8 @@ LOCAL_APPS = [
     'modelcluster',
     'taggit',
     'core',
-    'portfolio'
+    'portfolio',
+    'posts'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
