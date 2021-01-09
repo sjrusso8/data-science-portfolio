@@ -1,6 +1,6 @@
 module.exports = {
     purge: {
-        enabled: false,
+        enabled: true,
         content: ['../django-website/**/templates/*.html'],
     },
     darkMode: false, // or 'media' or 'class'
