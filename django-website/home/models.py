@@ -53,4 +53,5 @@ class HomePage(BaseModel):
     def get_context(self, request):
         context = super(HomePage, self).get_context(request)
         context['projects'] = Project.objects.filter(show_in_home=True)
+        context['minor_projects'] = Project.objects.filter(show_in_home=False)
         return context

@@ -49,15 +49,14 @@
                         <a class="inline-block py-2 px-4 font-bold no-underline" href="{% slugurl 'steven-j-russo' %}">Home</a>
                     </li>
                     <li class="mr-3 text-white">
-                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#recent-work">Recent Work</a>
-                    </li>
-                    <li class="mr-3 text-white">
                         <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#about">About</a>
                     </li>
                     <li class="mr-3 text-white">
-                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="{% slugurl 'portfolio' %}">Portfolio</a>
+                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#portfolio">Portfolio</a>
                     </li>
-
+                    <li class="mr-3 text-white">
+                        <a class="inline-block no-underline hover:font-bold hover:text-underline py-2 px-4" href="/#side-projects">Side Projects</a>
+                    </li>
                     <li class="mr-3 text-white">
                         <a href="https://github.com/sjrusso8">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-github" viewBox="0 0 16 16" id="github-logo">
@@ -82,7 +81,7 @@
 
 
     <!--Footer-->
-    <footer class="bg-white">
+    <footer class="bg-gray-100">
         <div class="container mx-auto px-8">
             <div class="w-full flex flex-row justify-center py-6">
                 <a class="" href="https://github.com/sjrusso8">
@@ -98,6 +97,9 @@
             </div>
             <div class="py-4 flex flex-row justify-center">
                 <a class="text-black no-underline hover:no-underline font-bold text-2xl lg:text-2xl" href="#"> SJR </a>
+            </div>
+            <div class="py-4 flex flex-row justify-center text-black">
+                <p>Made with <a class="font-bold" href="https://wagtail.io/"> Wagtail </a> & <a class="font-bold" href="https://tailwindcss.com/"> Tailwindcss </a> </p>
             </div>
         </div>
     </footer>
@@ -134,8 +136,6 @@
               navItems[i].classList.add("text-black");
               navItems[i].classList.remove("text-white");
           };
-
-          console.log(githubLogo.attribute)
 
           githubLogo.setAttribute("fill", "black")
           linkdLogo.setAttribute("fill", "black")
