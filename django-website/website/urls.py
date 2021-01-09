@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.urls import include, path
 from django.contrib import admin
+from django.conf import settings
 
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
@@ -19,8 +20,8 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
-    path('django-admin/', admin.site.urls),
-    path('admin/', include(wagtailadmin_urls)),
+    path(settings.DJANGO_ADMIN_URL, admin.site.urls),
+    path(settings.WAGTAIL_ADMIN_URL, include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
 
     # For anything not caught by a more specific rule above, hand over to

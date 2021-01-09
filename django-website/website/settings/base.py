@@ -60,7 +60,6 @@ LOCAL_APPS = [
     'taggit',
     'core',
     'portfolio',
-    'posts'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -116,6 +115,8 @@ DEBUG = True
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY =  env.str('SECRET_KEY')
 
+WAGTAIL_ADMIN_URL = "admin/"
+DJANGO_ADMIN_URL = "django-admin/"
 
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
